@@ -16,3 +16,5 @@ OWASP Juice-Shop in speedrun format
     - To get the scoreboard to appear in the OWASP juice box we must notice how each page is displayed through the URL and use that to find it
     - (Answer) at the end of the URL append /score-board to /#/
 - Zero Stars
+    - Using inspect element on the button which allows for the user to validate their feedback we see the difference between when all options which are required are filed is the 'disabled=true' Java-Script line, through this we can deduce that the user input is validated client side and that all we are required to change is this option and we should be able to bypass it.
+    - (Answer) To solve this you have a choice between either editing the change 'disabled=true' to 'enabled=true' or just remove it all together to simulate the fields being complete.
