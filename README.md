@@ -9,6 +9,8 @@ OWASP Juice-Shop in speedrun format
     - DOM based XSS is when the browser is dependant on user input to select an option or for navigation. For this issue to occure the user input must be referenced by a Java-Script script for the search and not sanitized there-fore allowing users to conduct code injection to the browser and allowing this to be sent to other users by simply sending them a URL.
     - (Answer) paste the DOM XSS code in the search bar and press enter.
 - Error Handling
+    - When a program encounters an error it either fails gracefully in a way which the developer has defined or it crashes leaving any continuation to deadlock in a not so graceful fashion.
+    - (Answer) to cause an ungraceful error to occure we simply go into the '/ftp/' directory which we found and open any file which is not .md or .pdf, such as the .url files in the quarantine sub-directory.
 - Missing Encoding
 - Outdated Whitelist
 - Privacy Policy
