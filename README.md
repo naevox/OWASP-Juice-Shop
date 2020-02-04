@@ -12,6 +12,8 @@ OWASP Juice-Shop in speedrun format
     - When a program encounters an error it either fails gracefully in a way which the developer has defined or it crashes leaving any continuation to deadlock in a not so graceful fashion. At times this can be a large error such as causing the program or system to crash as whole.
     - (Answer) to cause an ungraceful error to occure we simply go into the '/ftp/' directory which we found and open any file which is not .md or .pdf, such as the .url files in the quarantine sub-directory.
 - Missing Encoding
+    - For the image to display the name has to given to the server in a href fashion. Unfortunately for this website the developer didn't program to protect against accidental issues with special characters being interpreted by the browser instead of being protected agaisnt accidental execution. The issue seen here is the developer has directly referenced file name in the HTML href without encoding leaving the # in the file name to be executed as a comment in the HTML form.
+    - (Answer) change the href for the image from '#' to '%23' which is a URL encoded version of # which will be interpreted by the server but ignored by the browser.
 - Outdated Whitelist
 - Privacy Policy
 - Reflected XSS
