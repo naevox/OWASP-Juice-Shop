@@ -17,6 +17,8 @@ OWASP Juice-Shop in speedrun format
 - Outdated Whitelist
 - Privacy Policy
 - Reflected XSS
+    - Reflective XSS is Java-Script data which is saved temporarily on the browser but is removed once the user refreshes the page. This can be injected code which is temporarily available and referenced from the URL but will generally disapear if the user instead navigates or refreshes the page by clicking the href hyperlink to the current page.
+    - (Answer) Not complete as Juice-Shop is being hosted using heroku.
 - Repetitive Registration
 - Score Board
     - To get the scoreboard to appear in the OWASP juice box we must notice how each page is displayed through the URL and use that to find it
