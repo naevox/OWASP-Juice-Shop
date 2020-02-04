@@ -18,10 +18,14 @@ OWASP Juice-Shop in speedrun format
     - When options and features are removed from browser code they can be simply either commented out or the feature removed but the back-end is left. This can cause issues such as browser load time as the commented out code is still compiled but ignored, leave holes in the security which can add to the file size or offer individuals the option to still use un-supported services.
     - (Answer) go on devtools and go to the debugger option. From here navigate the different Java-Script classes and look for the keyword 'redirect' and add the redirect to the application URL.
 - Privacy Policy
+    - When scoping a penetration test we have to test each and every page which users have access to, this includes the policy page which shows the policy of the website and/ or company.
+    - (Answer) navigate to 'https://bobbox.herokuapp.com/#/privacy-security/privacy-policy'
 - Reflected XSS
     - Reflective XSS is Java-Script data which is saved temporarily on the browser but is removed once the user refreshes the page. This can be injected code which is temporarily available and referenced from the URL but will generally disapear if the user instead navigates or refreshes the page by clicking the href hyperlink to the current page.
     - (Answer) Not complete as Juice-Shop is being hosted using heroku.
-- Repetitive Registration
+- Repetitive Registration (DRY principle)
+    - The dry principle states that all user logic should solely occure only once. When registering a new user into the application we can check for this validation through the password validation. Entering a password of 5 characters or more in the first input we get an acceptance message, repeating this on the second password field we also get an acceptance message. Changing the first input after the second is accepted gives an acceptance massage, this means that the password fields are fully independant with repeated logic causing an error allowing for unautheristed passwords.
+    - (Answer) when creating a new user place password of 5 characters and repeat on second field, change first field input after second field is validated and proceed with user creation.
 - Score Board
     - To get the scoreboard to appear in the OWASP juice box we must notice how each page is displayed through the URL and use that to find it
     - (Answer) at the end of the URL append /score-board to /#/
