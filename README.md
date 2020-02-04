@@ -32,3 +32,16 @@ OWASP Juice-Shop in speedrun format
 - Zero Stars
     - Using inspect element on the button which allows for the user to validate their feedback we see the difference between when all options which are required are filed is the 'disabled=true' Java-Script line, through this we can deduce that the user input is validated client side and that all we are required to change is this option and we should be able to bypass it.
     - (Answer) To solve this you have a choice between either editing the change 'disabled=true' to 'enabled=true' or just remove it all together to simulate the fields being complete.
+
+
+# Level 2
+- Admin Section
+- Classic Stored XSS
+- Deprecated Interface
+- Fire-Star Feedback
+- Login Admin
+- Login MC SafeSearch
+- Password Strength
+- Security Policy
+- View Basket
+- Weird Crypto
