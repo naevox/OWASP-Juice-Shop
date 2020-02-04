@@ -15,6 +15,8 @@ OWASP Juice-Shop in speedrun format
     - For the image to display the name has to given to the server in a href fashion. Unfortunately for this website the developer didn't program to protect against accidental issues with special characters being interpreted by the browser instead of being protected agaisnt accidental execution. The issue seen here is the developer has directly referenced file name in the HTML href without encoding leaving the # in the file name to be executed as a comment in the HTML form.
     - (Answer) change the href for the image from '#' to '%23' which is a URL encoded version of # which will be interpreted by the server but ignored by the browser.
 - Outdated Whitelist
+    - When options and features are removed from browser code they can be simply either commented out or the feature removed but the back-end is left. This can cause issues such as browser load time as the commented out code is still compiled but ignored, leave holes in the security which can add to the file size or offer individuals the option to still use un-supported services.
+    - (Answer) go on devtools and go to the debugger option. From here navigate the different Java-Script classes and look for the keyword 'redirect' and add the redirect to the application URL.
 - Privacy Policy
 - Reflected XSS
     - Reflective XSS is Java-Script data which is saved temporarily on the browser but is removed once the user refreshes the page. This can be injected code which is temporarily available and referenced from the URL but will generally disapear if the user instead navigates or refreshes the page by clicking the href hyperlink to the current page.
